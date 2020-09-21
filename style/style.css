@@ -38,6 +38,162 @@ header nav ul li {
   font-weight: 700;
 }
 
+header .slider {
+  width: 100%;
+  height: 87vh;
+  overflow: hidden;
+}
+
+header .slider .slides {
+  width: 500%;
+  height: 87vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .slider .slides input {
+  display: none;
+}
+
+header .slider .slides #radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+header .slider .slides #radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+header .slider .slides #radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+header .slider .slides #radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40d3dc;
+}
+
+header .slider .slides #radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40d3dc;
+}
+
+header .slider .slides #radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40d3dc;
+}
+
+header .slider .slides #radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40d3dc;
+}
+
+header .slider .slides #headline {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 500px;
+}
+
+header .slider .slides #headline h1 {
+  color: #32b4e6;
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+header .slider .slides #headline p {
+  font-size: 26px;
+  margin: 0;
+  color: white;
+}
+
+header .slider .slides #headline h3 {
+  font-size: 16px;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 16px 0;
+  padding: 8px 12px;
+  background: #f47a31;
+}
+
+header .slider .slides .navigation-auto {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80vh;
+}
+
+header .slider .slides .navigation-auto div {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .slider .slides .navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+header .slider .slides .slide {
+  width: 20%;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+header .slider .slides .first {
+  background-image: url(../assets/images/one.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .slider .slides .second {
+  background-image: url(../assets/images/two.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .slider .slides .third {
+  background-image: url(../assets/images/three.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .slider .navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .slider .manual-btn {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .slider .manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+header .slider .manual-btn:hover {
+  background: #40d3dc;
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
