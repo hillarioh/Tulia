@@ -194,6 +194,80 @@ header .slider .manual-btn:hover {
   background: #40d3dc;
 }
 
+.over {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url(../assets/images/texture.jpg);
+  padding: 12px 24px;
+}
+
+.over .overview {
+  background-image: url(../assets/images/one.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  padding: 0 2px;
+  max-width: 30%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.over .overview h2 {
+  margin: 0;
+}
+
+.over .overview .over-lay {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.over .overview .over-lay:hover {
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f47a31), to(transparent));
+  background: linear-gradient(to top, #f47a31, transparent);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.over .overview .hint {
+  width: 70px;
+  border-top: 2px solid black;
+  margin-bottom: 16px;
+}
+
+.over .overview .over-content {
+  display: none;
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

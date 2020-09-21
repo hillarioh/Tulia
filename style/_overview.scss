@@ -1,0 +1,58 @@
+.over {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: url(../assets/images/texture.jpg);
+  padding: 12px 24px;
+
+  .overview {
+    background-image: url(../assets/images/one.jpg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    flex: 30%;
+    padding: 0 2px;
+    max-width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h2 {
+      margin: 0;
+    }
+
+    .over-lay {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+      cursor: pointer;
+
+      &:hover {
+        position: absolute;
+        background: linear-gradient(to top, #f47a31, transparent);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+
+    .hint {
+      width: 70px;
+      border-top: 2px solid black;
+      margin-bottom: 16px;
+    }
+
+    .over-content {
+      display: none;
+    }
+  }
+}
