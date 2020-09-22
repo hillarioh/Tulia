@@ -200,11 +200,14 @@ header .slider .manual-btn:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: url(../assets/images/texture.jpg);
-  padding: 12px 24px;
+  padding: 18px 0;
+  margin-bottom: 4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .over .overview {
@@ -212,13 +215,18 @@ header .slider .manual-btn:hover {
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 250px;
+  height: 280px;
+  margin: 0 8px;
   -webkit-box-flex: 30%;
       -ms-flex: 30%;
           flex: 30%;
-  padding: 0 2px;
   max-width: 30%;
   position: relative;
+}
+
+.over .overview .over-head {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,17 +237,47 @@ header .slider .manual-btn:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  z-index: 5;
 }
 
-.over .overview h2 {
+.over .overview .over-head h2 {
+  color: white;
   margin: 0;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.over .overview .over-head .hint {
+  width: 70px;
+  border-top: 2px solid #92c039;
+}
+
+.over .overview .over-head .over-content {
+  color: white;
+  font-size: 18px;
+  display: none;
+}
+
+.over .overview .over-head:hover {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f77e39), to(transparent));
+  background: linear-gradient(to top, #f77e39, transparent);
+}
+
+.over .overview .over-head:hover .over-content {
+  display: block;
 }
 
 .over .overview .over-lay {
   position: absolute;
   height: 100%;
   left: 0;
-  position: absolute;
   top: 0;
   width: 100%;
   z-index: 0;
@@ -247,25 +285,8 @@ header .slider .manual-btn:hover {
 }
 
 .over .overview .over-lay:hover {
-  position: absolute;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f47a31), to(transparent));
-  background: linear-gradient(to top, #f47a31, transparent);
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 0;
-}
-
-.over .overview .hint {
-  width: 70px;
-  border-top: 2px solid black;
-  margin-bottom: 16px;
-}
-
-.over .overview .over-content {
-  display: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f77e39), to(transparent));
+  background: linear-gradient(to top, #f77e39, transparent);
 }
 
 body {
