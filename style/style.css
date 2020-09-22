@@ -204,8 +204,7 @@ header .slider .manual-btn:hover {
       -ms-flex-pack: center;
           justify-content: center;
   background: url(../assets/images/texture.jpg);
-  padding: 18px 0;
-  margin-bottom: 4rem;
+  padding: 2.5rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -274,19 +273,44 @@ header .slider .manual-btn:hover {
   display: block;
 }
 
-.over .overview .over-lay {
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 0;
-  cursor: pointer;
+.vision {
+  background-color: #5e880e;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.over .overview .over-lay:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f77e39), to(transparent));
-  background: linear-gradient(to top, #f77e39, transparent);
+.vision .vis-body {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.vision .vis-body h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.vision .vis-body p {
+  font-size: 21px;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.vision .vis-body h3 {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 5rem;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  border: 2px solid white;
+}
+
+.vision .vis-body h3:hover {
+  background-color: white;
+  color: #5e880e;
 }
 
 body {
