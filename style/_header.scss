@@ -1,4 +1,4 @@
-header {
+.header {
   height: 100vh;
   background-color: lightsalmon;
 
@@ -169,5 +169,41 @@ header {
     .manual-btn:hover {
       background: #40d3dc;
     }
+  }
+}
+
+.header1 {
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: white;
+    #logo {
+      border-right: 2px solid #b9b2b261;
+      margin-right: 8px;
+      img {
+        height: 66px;
+        width: 300px;
+      }
+    }
+    ul {
+      display: flex;
+      padding: 0;
+      li {
+        list-style: none;
+        padding: 0 8px;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  #cover {
+    height: 70vh;
+    background-image: url(../assets/images/about.jpg);
+    background-position-y: 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 4px solid #f47a31;
   }
 }
