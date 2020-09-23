@@ -1,55 +1,113 @@
 .footer {
+  border-top: 4px solid #f47a31;
   .ft1 {
     background-color: #131313;
     display: flex;
-    form {
-      border: 1px solid #535c68;
-      width: 400px;
+    align-items: center;
+    padding: 2rem;
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+
+      h2 {
+        margin-top: 0;
+        color: white;
+      }
+
+      input {
+        line-height: 2rem;
+        margin-bottom: 8px;
+        padding-left: 6px;
+        font-family: "Quicksand", sans-serif;
+      }
+
+      h3 {
+        width: fit-content;
+        align-self: center;
+        cursor: pointer;
+        color: white;
+        padding: 10px 2rem;
+        background-color: #f47a31;
+        border: 2px solid #f47a31;
+        &:hover {
+          border: 2px solid white;
+        }
+      }
+    }
+
+    .form2 {
+      padding: 2rem;
     }
 
     #ft-nav {
       display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
 
       .ful1 {
+        margin: 0;
+        padding: 0 1rem;
         li {
+          font-size: 14px;
           list-style: none;
           color: white;
+
+          &:first-of-type {
+            font-weight: 800;
+            text-decoration: underline;
+          }
         }
       }
       .ful2 {
         display: flex;
         flex-direction: column;
         color: white;
+        font-size: 14px;
+
+        h4 {
+          margin: 0;
+          text-decoration: underline;
+        }
       }
     }
     .ft-lk {
       display: flex;
+      margin-top: 2.5rem;
+      margin-bottom: 0;
       padding: 0;
-
+      justify-content: center;
       li {
         list-style: none;
         background: #333;
-        border: 2px solid #333;
-        border-radius: 50%;
+
         display: block;
         margin: 0 8px;
-        padding: 4px 8px;
+        border-radius: 50%;
+        border: 2px solid #333;
         text-align: center;
         a {
           text-decoration: none;
           color: white;
           i {
             font-size: 20px;
+
+            padding: 6px 8px;
           }
         }
 
         &:hover {
-          background: #222f3e;
+          background: #000;
         }
       }
     }
   }
   .ft2 {
     background-color: #000;
+    padding: 1rem 0;
+    span {
+      color: white;
+      margin-left: 1rem;
+    }
   }
 }
