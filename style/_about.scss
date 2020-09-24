@@ -4,38 +4,84 @@
 
   .intro {
     padding: 3rem 0;
-    h1 {
-      margin: 0;
-      margin-bottom: 2rem;
-      text-align: center;
-      text-decoration: underline;
-    }
-    p {
+
+    .about-title {
       width: 70%;
       margin: auto;
-      text-align: center;
-      margin-bottom: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin-top: 3rem;
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 800;
+      }
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      &:first-of-type {
+        margin-bottom: 3rem;
+      }
     }
-    div {
-      width: 150px;
-      border-bottom: 12px groove #f16249;
+
+    .about-end {
+      width: 70%;
+      border-bottom: 12px groove #f47a31;
       margin: auto;
     }
   }
 
-  .mission {
-    padding: 2rem 0;
+  .team {
+    padding: 20px;
+
     h2 {
-      margin: 0;
-      margin-bottom: 2rem;
       text-align: center;
+      text-decoration: underline;
     }
 
-    p {
-      margin: 0;
-      text-align: center;
-      width: 70%;
-      margin: auto;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .col-md-3 {
+        box-sizing: border-box;
+        flex: 22%;
+        padding: 0 1rem;
+        max-width: 22%;
+
+        .news-img {
+          height: 201px;
+          max-width: 100% !important;
+        }
+
+        .img1 {
+          background-image: url(../assets/images/two.jpg);
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        h3 {
+          margin: 0;
+        }
+
+        .hint {
+          width: 70px;
+          border-top: 2px solid #555;
+        }
+
+        p {
+          margin: 8px 0;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
     }
   }
 }

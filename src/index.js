@@ -1,6 +1,8 @@
 const headTitle = document.getElementById("head-title");
 const headContent = document.getElementById("head-body");
 const headLink = document.getElementById("head-link");
+const overHead = document.querySelector(".over-head");
+const overContent = document.querySelector(".over-content");
 
 let headlines = [
   {
@@ -34,3 +36,11 @@ setInterval(function () {
   headContent.textContent = headlines[counter - 1].content;
   headLink.textContent = headlines[counter - 1].link;
 }, 5000);
+
+// overHead.addEventListener("mouseover", () => {
+//   overContent.style.display = "block";
+// });
+
+// overHead.addEventListener("mouseout", () => {
+//   overContent.style.display = "block";
+// });
