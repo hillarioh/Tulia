@@ -38,6 +38,57 @@
   font-weight: 700;
 }
 
+.header nav ul #nav-program {
+  position: relative;
+  cursor: pointer;
+}
+
+.header nav ul #nav-program h3 {
+  margin: 0;
+}
+
+.header nav ul #nav-program div {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header nav ul #nav-program:hover {
+  background: none;
+}
+
+.header nav ul #nav-program:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  -webkit-box-shadow: 3px 5px 6px #ccc;
+          box-shadow: 3px 5px 6px #ccc;
+}
+
+.header nav ul #nav-program:hover div span {
+  border-top: 2px solid #f47a31;
+  background: white;
+}
+
+.header nav ul #nav-program:hover div span a {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header nav ul #nav-program:hover div span a:hover {
+  color: #f47a31;
+}
+
 .header .slider {
   width: 100%;
   height: 87vh;
@@ -229,7 +280,156 @@
   font-weight: 700;
 }
 
+.header1 nav ul #nav-program {
+  position: relative;
+  cursor: pointer;
+}
+
+.header1 nav ul #nav-program h3 {
+  margin: 0;
+}
+
+.header1 nav ul #nav-program div {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header1 nav ul #nav-program:hover {
+  background: none;
+}
+
+.header1 nav ul #nav-program:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  -webkit-box-shadow: 3px 5px 6px #ccc;
+          box-shadow: 3px 5px 6px #ccc;
+}
+
+.header1 nav ul #nav-program:hover div span {
+  border-top: 2px solid #f47a31;
+  background: white;
+}
+
+.header1 nav ul #nav-program:hover div span a {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header1 nav ul #nav-program:hover div span a:hover {
+  color: #f47a31;
+}
+
 .header1 #cover {
+  height: 70vh;
+  background-image: url(../assets/images/about.jpg);
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 4px solid #f47a31;
+}
+
+.header2 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background-color: white;
+}
+
+.header2 nav #logo {
+  border-right: 2px solid #b9b2b261;
+  margin-right: 8px;
+}
+
+.header2 nav #logo img {
+  height: 66px;
+  width: 300px;
+}
+
+.header2 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header2 nav ul li {
+  list-style: none;
+  padding: 0 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.header2 nav ul #nav-program {
+  position: relative;
+  cursor: pointer;
+}
+
+.header2 nav ul #nav-program h3 {
+  margin: 0;
+}
+
+.header2 nav ul #nav-program div {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header2 nav ul #nav-program:hover {
+  background: none;
+}
+
+.header2 nav ul #nav-program:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  -webkit-box-shadow: 3px 5px 6px #ccc;
+          box-shadow: 3px 5px 6px #ccc;
+}
+
+.header2 nav ul #nav-program:hover div span {
+  border-top: 2px solid #f47a31;
+  background: white;
+}
+
+.header2 nav ul #nav-program:hover div span a {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header2 nav ul #nav-program:hover div span a:hover {
+  color: #f47a31;
+}
+
+.header2 #cover {
   height: 70vh;
   background-image: url(../assets/images/about.jpg);
   background-position-y: 35%;
@@ -669,6 +869,126 @@
 .about .team .row .col-md-3 p a {
   text-decoration: none;
   color: black;
+}
+
+.feeding {
+  background: url(../assets/images/texture.jpg);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feeding .intro {
+  width: 70%;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.feeding .intro h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.feeding .intro p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.feeding .intro .feed-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.feeding .intro .feed-pic .fp1 {
+  background-image: url(../assets/images/food1.jpg);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  max-width: 45%;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.feeding .intro .feed-pic .fp2 {
+  background-image: url(../assets/images/food2.jpg);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  max-width: 45%;
+  margin-left: 10px;
+  height: 300px;
+}
+
+.educate {
+  background: url(../assets/images/texture.jpg);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.educate .intro {
+  width: 70%;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.educate .intro h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.educate .intro p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.educate .intro .feed-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.educate .intro .feed-pic .fp1 {
+  background-image: url(../assets/images/food1.jpg);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  max-width: 45%;
+  height: 300px;
+  margin-right: 10px;
+}
+
+.educate .intro .feed-pic .fp2 {
+  background-image: url(../assets/images/food2.jpg);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
+  max-width: 45%;
+  margin-left: 10px;
+  height: 300px;
 }
 
 body {
