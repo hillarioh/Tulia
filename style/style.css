@@ -12,6 +12,7 @@
           align-items: center;
   padding: 4px;
   background-color: white;
+  border-bottom: 3px solid #f47a31;
 }
 
 .header nav #logo {
@@ -257,6 +258,7 @@
           align-items: center;
   padding: 4px;
   background-color: white;
+  border-bottom: 3px solid #f47a31;
 }
 
 .header1 nav #logo {
@@ -355,6 +357,7 @@
           align-items: center;
   padding: 4px;
   background-color: white;
+  border-bottom: 3px solid #f47a31;
 }
 
 .header2 nav #logo {
@@ -783,7 +786,7 @@
 }
 
 .about .intro {
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 
 .about .intro .about-title {
