@@ -1,13 +1,14 @@
-@import "./header.scss";
-@import "./overview.scss";
-@import "./vision.scss";
-@import "./footer.scss";
-@import "./about.scss";
-@import "./feeding.scss";
-@import "./education.scss";
-@import "./program.scss";
-@import "./gallery.scss";
+@import "./header";
+@import "./overview";
+@import "./vision";
+@import "./footer";
+@import "./about";
+@import "./feeding";
+@import "./education";
+@import "./program";
+@import "./gallery";
 @import "./contact";
+@import "./covid";
 
 body {
   box-sizing: border-box;
