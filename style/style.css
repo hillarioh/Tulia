@@ -1325,10 +1325,10 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: 10 / 1 / 11 / 4;
-  background-image: url(../assets/images/thirteen.jpg);
-  background-position: 0 15%;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.gallery .images .gallery-image .col13 img {
+  overflow: hidden;
 }
 
 body {
