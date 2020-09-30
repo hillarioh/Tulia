@@ -1325,10 +1325,47 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: 10 / 1 / 11 / 4;
+  background-image: url(../assets/images/thirt.jpg);
+  background-position: 0 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.gallery .images .gallery-image .col13 img {
-  overflow: hidden;
+.donate {
+  background: url(../assets/images/texture.jpg);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.donate div {
+  width: 60%;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.donate div h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 50px;
+}
+
+.donate div p {
+  text-align: center;
+}
+
+.donate div form {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.donate div form #paypal {
+  padding: 8px;
+  border: 2px solid #32b4e6;
+  border-radius: 5px;
+}
+
+.donate div form #paypal:hover {
+  background-color: white;
 }
 
 body {

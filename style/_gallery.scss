@@ -118,10 +118,44 @@
       }
       .col13 {
         grid-area: 10 / 1 / 11 / 4;
-        background-image: url(../assets/images/thirteen.jpg);
-        background-position: 0 15%;
+        background-image: url(../assets/images/thirt.jpg);
+        background-position: 0 30%;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+    }
+  }
+}
+
+.donate {
+  background: url(../assets/images/texture.jpg);
+  box-sizing: border-box;
+
+  div {
+    width: 60%;
+    margin: auto;
+    padding: 3rem 0;
+    h2 {
+      text-align: center;
+      margin: 0;
+      font-size: 50px;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    form {
+      margin-top: 2rem;
+      text-align: center;
+
+      #paypal {
+        padding: 8px;
+        border: 2px solid #32b4e6;
+        border-radius: 5px;
+        &:hover {
+          background-color: white;
+        }
       }
     }
   }
