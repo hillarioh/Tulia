@@ -97,6 +97,10 @@
         margin-left: -40%;
       }
 
+      #radio4:checked ~ .first {
+        margin-left: -60%;
+      }
+
       #radio1:checked ~ .navigation-auto .auto-btn1 {
         background: #40d3dc;
       }
@@ -156,7 +160,7 @@
         }
 
         div:not(:last-child) {
-          margin-right: 40px;
+          margin-right: 60px;
         }
       }
 
@@ -188,6 +192,12 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      .fourth {
+        background-image: url(../assets/images/num.jpg);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
     }
 
     .navigation-manual {
@@ -207,7 +217,7 @@
     }
 
     .manual-btn:not(:last-child) {
-      margin-right: 40px;
+      margin-right: 60px;
     }
 
     .manual-btn:hover {

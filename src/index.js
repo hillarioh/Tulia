@@ -23,13 +23,19 @@ let headlines = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione saepe quae repellendus eius voluptas.",
     link: "Read stories",
   },
+  {
+    title: "Agricultural Activities",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione saepe quae repellendus eius voluptas.",
+    link: "Read stories",
+  },
 ];
 
 var counter = 1;
 setInterval(function () {
   document.getElementById("radio" + counter).checked = true;
   counter++;
-  if (counter > 3) {
+  if (counter > 4) {
     counter = 1;
   }
   headTitle.textContent = headlines[counter - 1].title;

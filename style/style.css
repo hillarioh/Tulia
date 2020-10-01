@@ -123,6 +123,10 @@
   margin-left: -40%;
 }
 
+.header .slider .slides #radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
 .header .slider .slides #radio1:checked ~ .navigation-auto .auto-btn1 {
   background: #40d3dc;
 }
@@ -190,7 +194,7 @@
 }
 
 .header .slider .slides .navigation-auto div:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .header .slider .slides .slide {
@@ -220,6 +224,13 @@
   background-size: cover;
 }
 
+.header .slider .slides .fourth {
+  background-image: url(../assets/images/num.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .header .slider .navigation-manual {
   position: absolute;
   width: 100%;
@@ -242,7 +253,7 @@
 }
 
 .header .slider .manual-btn:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 .header .slider .manual-btn:hover {
