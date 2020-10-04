@@ -14,7 +14,7 @@ let headlines = [
   {
     title: "Covid-19",
     content: "Progress made in our Covid-19 Response in the local community.",
-    link: "Response",
+    link: "Our Response",
   },
   {
     title: "Water and Sanitation",
