@@ -6,28 +6,27 @@ const overContent = document.querySelector(".over-content");
 
 let headlines = [
   {
-    title: "Meet the boss",
+    title: "Feeding Program",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione saepe quae repellendus eius voluptas.",
+      "Providing nutritious meals to less fortunate children under our program.",
     link: "Learn more",
   },
   {
     title: "Covid-19",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione saepe quae repellendus eius voluptas.",
+    content: "Progress made in our Covid-19 Response in the local community.",
     link: "Response",
   },
   {
-    title: "Stories of change",
+    title: "Water and Sanitation",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione saepe quae repellendus eius voluptas.",
-    link: "Read stories",
+      "Providing access to safe drinking water and adherence to good hygiene practises.",
+    link: "Read More",
   },
   {
     title: "Agricultural Activities",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione saepe quae repellendus eius voluptas.",
-    link: "Read stories",
+      "We are focused on building our economic activity through practising agriculture",
+    link: "Read More",
   },
 ];
 
