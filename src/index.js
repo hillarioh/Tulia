@@ -28,6 +28,18 @@ let headlines = [
       "We are focused on building our economic activity through practising agriculture",
     link: "Read More",
   },
+  {
+    title: "Sports and Talent",
+    content:
+      "We are focused on building our economic activity through practising agriculture",
+    link: "Read More",
+  },
+  {
+    title: "Girls and Women Empowerment",
+    content:
+      "We are focused on building our economic activity through practising agriculture",
+    link: "Read More",
+  },
 ];
 
 var counter = 1;
