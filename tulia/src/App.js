@@ -1,16 +1,51 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./App.scss";
+import "./styles/App.scss";
 
-function App() {}
+function App() {
+  return <Home />;
+}
 
 function Home() {
   return (
     <div>
       <Nav />
+      <div className="slider">
+        <div className="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div className="slide first"></div>
+          <div className="slide second"></div>
+          <div className="slide third"></div>
+          <div className="slide fourth"></div>
+          <div className="navigation-auto">
+            <div className="auto-btn1"></div>
+            <div className="auto-btn2"></div>
+            <div className="auto-btn3"></div>
+            <div className="auto-btn4"></div>
+          </div>
+
+          <div id="headline">
+            <h1 id="head-title"></h1>
+            <p id="head-body"></p>
+            <h3 id="head-link"></h3>
+          </div>
+        </div>
+
+        <div className="navigation-manual">
+          <label className="manual-btn"></label>
+          <label className="manual-btn"></label>
+          <label className="manual-btn"></label>
+          <label className="manual-btn"></label>
+        </div>
+      </div>
     </div>
   );
 }
+
 function About() {
   return (
     <div>
