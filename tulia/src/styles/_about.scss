@@ -1,0 +1,87 @@
+.about {
+  background: url(../assets/images/texture.jpg);
+  box-sizing: border-box;
+
+  .intro {
+    padding: 1rem 0;
+
+    .about-title {
+      width: 70%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin-top: 3rem;
+
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 800;
+      }
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      &:first-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .about-end {
+      width: 70%;
+      border-bottom: 12px groove #f47a31;
+      margin: auto;
+    }
+  }
+
+  .team {
+    padding: 20px;
+
+    h2 {
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .col-md-3 {
+        box-sizing: border-box;
+        flex: 22%;
+        padding: 0 1rem;
+        max-width: 22%;
+
+        .news-img {
+          height: 201px;
+          max-width: 100% !important;
+        }
+
+        .img1 {
+          background-image: url(../assets/images/two.jpg);
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        h3 {
+          margin: 0;
+        }
+
+        .hint {
+          width: 70px;
+          border-top: 2px solid #555;
+        }
+
+        p {
+          margin: 8px 0;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
