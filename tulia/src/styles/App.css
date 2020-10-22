@@ -1,0 +1,530 @@
+.header {
+  height: 100vh;
+  background-color: lightsalmon;
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background-color: white;
+  border-bottom: 3px solid #f47a31;
+}
+
+.header nav #logo {
+  border-right: 2px solid #b9b2b261;
+  margin-right: 8px;
+}
+
+.header nav #logo img {
+  height: 66px;
+  width: 300px;
+}
+
+.header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header nav ul li {
+  list-style: none;
+  padding: 0 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.header nav ul #nav-program {
+  position: relative;
+  cursor: pointer;
+}
+
+.header nav ul #nav-program h3 {
+  margin: 0;
+}
+
+.header nav ul #nav-program div {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header nav ul #nav-program:hover {
+  background: none;
+}
+
+.header nav ul #nav-program:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  -webkit-box-shadow: 3px 5px 6px #ccc;
+          box-shadow: 3px 5px 6px #ccc;
+}
+
+.header nav ul #nav-program:hover div span {
+  border-top: 2px solid #f47a31;
+  background: white;
+}
+
+.header nav ul #nav-program:hover div span a {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header nav ul #nav-program:hover div span a:hover {
+  color: #f47a31;
+}
+
+.header .slider {
+  width: 100%;
+  height: 87vh;
+  overflow: hidden;
+}
+
+.header .slider .slides {
+  width: 500%;
+  height: 87vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .slider .slides input {
+  display: none;
+}
+
+.header .slider .slides #radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+.header .slider .slides #radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+.header .slider .slides #radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.header .slider .slides #radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+.header .slider .slides #radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #40d3dc;
+}
+
+.header .slider .slides #radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #40d3dc;
+}
+
+.header .slider .slides #radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #40d3dc;
+}
+
+.header .slider .slides #radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #40d3dc;
+}
+
+.header .slider .slides #headline {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 500px;
+}
+
+.header .slider .slides #headline h1 {
+  color: #32b4e6;
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.header .slider .slides #headline p {
+  font-size: 26px;
+  margin: 0;
+  color: white;
+}
+
+.header .slider .slides #headline h3 {
+  font-size: 16px;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 16px 0;
+  padding: 8px 12px;
+  background: #f47a31;
+}
+
+.header .slider .slides .navigation-auto {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80vh;
+}
+
+.header .slider .slides .navigation-auto div {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .slider .slides .navigation-auto div:not(:last-child) {
+  margin-right: 60px;
+}
+
+.header .slider .slides .slide {
+  width: 20%;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.header .slider .slides .first {
+  background-image: url(../assets/images/one.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .slider .slides .second {
+  background-image: url(../assets/images/two.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .slider .slides .third {
+  background-image: url(../assets/images/three.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .slider .slides .fourth {
+  background-image: url(../assets/images/num.jpg);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .slider .navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .slider .manual-btn {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .slider .manual-btn:not(:last-child) {
+  margin-right: 60px;
+}
+
+.header .slider .manual-btn:hover {
+  background: #40d3dc;
+}
+
+.header1 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background-color: white;
+  border-bottom: 3px solid #f47a31;
+}
+
+.header1 nav #logo {
+  border-right: 2px solid #b9b2b261;
+  margin-right: 8px;
+}
+
+.header1 nav #logo img {
+  height: 66px;
+  width: 300px;
+}
+
+.header1 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.header1 nav ul li {
+  list-style: none;
+  padding: 0 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.header1 nav ul #nav-program {
+  position: relative;
+  cursor: pointer;
+}
+
+.header1 nav ul #nav-program h3 {
+  margin: 0;
+}
+
+.header1 nav ul #nav-program div {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header1 nav ul #nav-program:hover {
+  background: none;
+}
+
+.header1 nav ul #nav-program:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  -webkit-box-shadow: 3px 5px 6px #ccc;
+          box-shadow: 3px 5px 6px #ccc;
+}
+
+.header1 nav ul #nav-program:hover div span {
+  border-top: 2px solid #f47a31;
+  background: white;
+}
+
+.header1 nav ul #nav-program:hover div span a {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header1 nav ul #nav-program:hover div span a:hover {
+  color: #f47a31;
+}
+
+.header1 #cover {
+  height: 70vh;
+  background-image: url(../assets/images/about.jpg);
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 4px solid #f47a31;
+}
+
+.header2 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background-color: white;
+  border-bottom: 3px solid #f47a31;
+}
+
+.header2 nav #logo {
+  border-right: 2px solid #b9b2b261;
+  margin-right: 8px;
+}
+
+.header2 nav #logo img {
+  height: 66px;
+  width: 300px;
+}
+
+.header2 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header2 nav ul li {
+  list-style: none;
+  padding: 0 8px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.header2 nav ul #nav-program {
+  position: relative;
+  cursor: pointer;
+}
+
+.header2 nav ul #nav-program h3 {
+  margin: 0;
+}
+
+.header2 nav ul #nav-program div {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+}
+
+.header2 nav ul #nav-program:hover {
+  background: none;
+}
+
+.header2 nav ul #nav-program:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  -webkit-box-shadow: 3px 5px 6px #ccc;
+          box-shadow: 3px 5px 6px #ccc;
+}
+
+.header2 nav ul #nav-program:hover div span {
+  border-top: 2px solid #f47a31;
+  background: white;
+}
+
+.header2 nav ul #nav-program:hover div span a {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header2 nav ul #nav-program:hover div span a:hover {
+  color: #f47a31;
+}
+
+.header2 #cover {
+  height: 70vh;
+  background-image: url(../assets/images/about.jpg);
+  background-position-y: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 4px solid #f47a31;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=App.css.map */

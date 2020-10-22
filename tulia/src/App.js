@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./styles/App.scss";
+import "./styles/App.css";
 
 function App() {
   return <Home />;
@@ -8,7 +8,7 @@ function App() {
 
 function Home() {
   return (
-    <div>
+    <div className="header">
       <Nav />
       <div className="slider">
         <div className="slides">
