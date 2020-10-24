@@ -1,6 +1,17 @@
 .header {
   .slider {
-    padding-top: 1rem;
+    .swiper-pagination-progressbar-fill {
+      background-color: darkorange;
+    }
+
+    .swiper-button-prev {
+      color: #f47a31;
+      font-weight: 800;
+    }
+    .swiper-button-next {
+      color: #f47a31;
+      font-weight: 800;
+    }
   }
 }
 
