@@ -2,6 +2,24 @@ import { div } from "prelude-ls";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles/App.css";
+import logo from "./assets/images/logo.png";
+import front1 from "./assets/images/front.jpg";
+import front2 from "./assets/images/front2.jpg";
+import front3 from "./assets/images/one.jpg";
+import front4 from "./assets/images/two.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectFade,
+} from "swiper";
+import "swiper/swiper.scss";
+import "swiper/components/effect-fade/effect-fade.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+
+SwiperCore.use([Navigation, Autoplay, Pagination, EffectFade]);
 
 function App() {
   return <Nav />;
@@ -9,40 +27,56 @@ function App() {
 
 function Home() {
   return (
-    <div>
+    <div style={{ paddingTop: "5rem" }}>
       <div className="header">
-        {/* <Nav /> */}
         <div className="slider">
-          <div className="slides">
-            <input type="radio" name="radio-btn" id="radio1" />
-            <input type="radio" name="radio-btn" id="radio2" />
-            <input type="radio" name="radio-btn" id="radio3" />
-            <input type="radio" name="radio-btn" id="radio4" />
-
-            <div className="slide first"></div>
-            <div className="slide second"></div>
-            <div className="slide third"></div>
-            <div className="slide fourth"></div>
-            <div className="navigation-auto">
-              <div className="auto-btn1"></div>
-              <div className="auto-btn2"></div>
-              <div className="auto-btn3"></div>
-              <div className="auto-btn4"></div>
-            </div>
-
-            <div id="headline">
-              <h1 id="head-title"></h1>
-              <p id="head-body"></p>
-              <h3 id="head-link"></h3>
-            </div>
-          </div>
-
-          <div className="navigation-manual">
-            <label className="manual-btn"></label>
-            <label className="manual-btn"></label>
-            <label className="manual-btn"></label>
-            <label className="manual-btn"></label>
-          </div>
+          <Swiper
+            effect="fade"
+            navigation
+            pagination={{ type: "progressbar" }}
+            spaceBetween={0}
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            slidesPerView={1}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <SwiperSlide style={{ height: "90vh" }}>
+              <div>
+                <img
+                  src={front1}
+                  alt=""
+                  style={{ width: "100%", height: "720px" }}
+                ></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide style={{ height: "90vh" }}>
+              <div>
+                <img
+                  src={front2}
+                  alt=""
+                  style={{ width: "100%", height: "100%" }}
+                ></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide style={{ height: "90vh" }}>
+              <div>
+                <img
+                  src={front3}
+                  alt=""
+                  style={{ width: "100%", height: "100%" }}
+                ></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide style={{ height: "90vh" }}>
+              <div>
+                <img
+                  src={front4}
+                  alt=""
+                  style={{ width: "100%", height: "100%" }}
+                ></img>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
 
@@ -96,7 +130,7 @@ function Home() {
 
 function About() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="header1">
         <div id="cover"></div>
       </div>
@@ -185,7 +219,7 @@ function About() {
 }
 function Agriculture() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="educate">
         <section className="intro">
           <h2>Agricultural program</h2>
@@ -217,7 +251,7 @@ function Agriculture() {
 }
 function Contact() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="contact">
         <h2>Contact Us</h2>
         <div className="contact-details">
@@ -255,7 +289,7 @@ function Contact() {
 }
 function Covid() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="covid">
         <section className="intro">
           <h2>Covid 19</h2>
@@ -286,7 +320,7 @@ function Covid() {
 }
 function Donate() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="donate">
         <div>
           <h2>Donate to Tulia Foundation</h2>
@@ -333,7 +367,7 @@ function Donate() {
 }
 function Education() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="educate">
         <section className="intro">
           <h2>Education program</h2>
@@ -363,7 +397,7 @@ function Education() {
 }
 function Empower() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="educate">
         <section className="intro">
           <h2>Girl Child Empowerment</h2>
@@ -401,7 +435,7 @@ function Empower() {
 }
 function Feeding() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="feeding">
         <section className="intro">
           <h2>Feeding program</h2>
@@ -429,7 +463,7 @@ function Feeding() {
 }
 function Gallery() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="gallery">
         <h2 className="gallery-title">Our Gallery</h2>
         <div className="videos">
@@ -468,7 +502,7 @@ function Gallery() {
 }
 function Program() {
   return (
-    <div>
+    <div style={{ paddingTop: "4.5rem" }}>
       <div className="program">
         <div className="top-program">
           <h2>Our Programs</h2>
@@ -542,16 +576,20 @@ function Nav() {
       <nav className="nav">
         <div id="logo">
           <Link to="/">
-            <img src="./assets/images/logo.png" alt="Organisation logo" />
+            <img src={logo} alt="Organisation logo" />
           </Link>
         </div>
         <ul>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link className="nav-link" to="/about">
+              About Us
+            </Link>
           </li>
           <li id="nav-program">
             <h3>
-              <Link to="/program">Programs</Link>
+              <Link className="nav-link" to="/program">
+                Programs
+              </Link>
             </h3>
             <div>
               <span>
@@ -569,16 +607,24 @@ function Nav() {
             </div>
           </li>
           <li>
-            <Link to="/gallery">Gallery</Link>
+            <Link className="nav-link" to="/gallery">
+              Gallery
+            </Link>
           </li>
           <li>
-            <Link to="/covid">COVID-19</Link>
+            <Link className="nav-link" to="/covid">
+              COVID-19
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact Us</Link>
+            <Link className="nav-link" to="/contact">
+              Contact Us
+            </Link>
           </li>
           <li>
-            <Link to="/donate">Donate</Link>
+            <Link className="nav-link" to="/donate">
+              Donate
+            </Link>
           </li>
         </ul>
       </nav>
