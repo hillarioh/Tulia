@@ -2,11 +2,29 @@ import { div } from "prelude-ls";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles/App.css";
+
+//Image imports
 import logo from "./assets/images/logo.png";
 import front1 from "./assets/images/front.jpg";
 import front2 from "./assets/images/front2.jpg";
 import front3 from "./assets/images/one.jpg";
 import front4 from "./assets/images/two.jpg";
+import onee from "./assets/images/onee.jpg";
+import twoo from "./assets/images/twoo.jpg";
+import threee from "./assets/images/threee.jpg";
+import fourr from "./assets/images/fourr.jpg";
+import fivee from "./assets/images/fivee.jpg";
+import sixx from "./assets/images/sixx.jpg";
+import sevenn from "./assets/images/sevenn.jpg";
+import eight from "./assets/images/eight.jpg";
+import nine from "./assets/images/nine.jpg";
+import ten from "./assets/images/ten.jpg";
+import eleven from "./assets/images/eleven.jpg";
+import twelve from "./assets/images/twelve.jpg";
+import thirteen from "./assets/images/thirteen.jpg";
+
+import Gallery from "react-grid-gallery";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Navigation,
@@ -20,6 +38,103 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 
 SwiperCore.use([Navigation, Autoplay, Pagination, EffectFade]);
+
+const IMAGES = [
+  {
+    src: onee,
+    thumbnail: onee,
+    thumbnailWidth: 248,
+    thumbnailHeight: 320,
+    caption: "Our Yard",
+  },
+  {
+    src: twoo,
+    thumbnail: twoo,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    src: threee,
+    thumbnail: threee,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "Boats (Jeshu John - designerspics.com)",
+  },
+  {
+    src: fourr,
+    thumbnail: fourr,
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    caption: "Color Pencils (Jeshu John - designerspics.com)",
+  },
+  {
+    src: fivee,
+    thumbnail: fivee,
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+  },
+  {
+    src: sixx,
+    thumbnail: sixx,
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+    caption: "37H (gratispgraphy.com)",
+  },
+  {
+    src: sevenn,
+    thumbnail: sevenn,
+    thumbnailWidth: 240,
+    thumbnailHeight: 320,
+    caption: "8H (gratisography.com)",
+  },
+  {
+    src: eight,
+    thumbnail: eight,
+    thumbnailWidth: 320,
+    thumbnailHeight: 190,
+    caption: "286H (gratisography.com)",
+  },
+  {
+    src: nine,
+    thumbnail: nine,
+    thumbnailWidth: 320,
+    thumbnailHeight: 148,
+    caption: "315H (gratisography.com)",
+  },
+  {
+    src: ten,
+    thumbnail: ten,
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+    caption: "201H (gratisography.com)",
+  },
+  {
+    src: twelve,
+    alt: "Big Ben - London",
+    thumbnail: twelve,
+    thumbnailWidth: 248,
+    thumbnailHeight: 320,
+    caption: "Big Ben (Tom Eversley - isorepublic.com)",
+  },
+  {
+    src: eleven,
+    alt: "Red Zone - Paris",
+    thumbnail: eleven,
+    thumbnailWidth: 320,
+    thumbnailHeight: 113,
+    caption: "Red Zone - Paris (Tom Eversley - isorepublic.com)",
+  },
+  {
+    src: thirteen,
+    alt: "Wood Glass",
+    thumbnail: thirteen,
+    thumbnailWidth: 313,
+    thumbnailHeight: 320,
+    caption: "Wood Glass (Tom Eversley - isorepublic.com)",
+  },
+];
 
 function App() {
   return <Nav />;
@@ -461,7 +576,7 @@ function Feeding() {
     </div>
   );
 }
-function Gallery() {
+function Gallerys() {
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="gallery">
@@ -479,21 +594,8 @@ function Gallery() {
         </div>
         <div className="images">
           <h2>Images</h2>
-          <div className="gallery-image">
-            <div className="col1"></div>
-            <div className="col2"></div>
-            <div className="col3"></div>
-            <div className="col4"></div>
-            <div className="col5"></div>
-            <div className="col6"></div>
-            <div className="col7"></div>
-            <div className="col8"></div>
-            <div className="col9"></div>
-            <div className="col10"></div>
-            <div className="col11"></div>
-            <div className="col12"></div>
-            <div className="col13"></div>
-          </div>
+          <Gallery images={IMAGES} enableImageSelection={false} />
+          <h1></h1>
         </div>
       </div>
       <Footer />
@@ -607,7 +709,7 @@ function Nav() {
             </div>
           </li>
           <li>
-            <Link className="nav-link" to="/gallery">
+            <Link className="nav-link" to="/gallerys">
               Gallery
             </Link>
           </li>
@@ -644,8 +746,8 @@ function Nav() {
         <Route path="/feeding">
           <Feeding />
         </Route>
-        <Route path="/gallery">
-          <Gallery />
+        <Route path="/gallerys">
+          <Gallerys />
         </Route>
         <Route path="/program">
           <Program />
