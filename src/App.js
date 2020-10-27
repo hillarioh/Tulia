@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles/App.css";
 
+import DehazeIcon from "@material-ui/icons/Dehaze";
 //Image imports
 import logo from "./assets/images/logo.png";
 import front1 from "./assets/images/front.jpg";
@@ -672,101 +673,127 @@ function Program() {
     </div>
   );
 }
-function Nav() {
-  return (
-    <Router>
-      <nav className="nav">
-        <div id="logo">
-          <Link to="/">
-            <img src={logo} alt="Organisation logo" />
-          </Link>
-        </div>
-        <ul>
-          <li>
-            <Link className="nav-link" to="/about">
-              About Us
+
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false,
+    };
+    this.updateStuff = this.updateStuff.bind(this);
+  }
+
+  updateStuff() {
+    let x = document.getElementById("res-nav");
+    if (x.style.display === "flex") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "flex";
+    }
+  }
+
+  render() {
+    return (
+      <Router>
+        <nav className="nav">
+          <div id="logo">
+            <Link to="/">
+              <img src={logo} alt="Organisation logo" />
             </Link>
-          </li>
-          <li id="nav-program">
-            <h3>
-              <Link className="nav-link" to="/program">
-                Programs
-              </Link>
-            </h3>
-            <div>
-              <span>
-                <Link to="/feeding">Feeding program</Link>
-              </span>
-              <span>
-                <Link to="/education">Peer Counselling</Link>
-              </span>
-              <span>
-                <Link to="/empower">Empowerment</Link>
-              </span>
-              <span>
-                <Link to="/agriculture">Agricultural Activities</Link>
-              </span>
+            <div className="ham" onClick={this.updateStuff}>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
-          </li>
-          <li>
-            <Link className="nav-link" to="/gallerys">
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/covid">
-              COVID-19
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/contact">
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link className="nav-link" to="/donate">
-              Donate
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/covid">
-          <Covid />
-        </Route>
-        <Route path="/education">
-          <Education />
-        </Route>
-        <Route path="/feeding">
-          <Feeding />
-        </Route>
-        <Route path="/gallerys">
-          <Gallerys />
-        </Route>
-        <Route path="/program">
-          <Program />
-        </Route>
-        <Route path="/agriculture">
-          <Agriculture />
-        </Route>
-        <Route path="/donate">
-          <Donate />
-        </Route>
-        <Route path="/empower">
-          <Empower />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  );
+          </div>
+
+          <ul id="res-nav">
+            <li>
+              <Link className="nav-link" to="/about">
+                About Us
+              </Link>
+            </li>
+            <li id="nav-program">
+              <h3>
+                <Link className="nav-link" to="/program">
+                  Programs
+                </Link>
+              </h3>
+              <div>
+                <span>
+                  <Link to="/feeding">Feeding program</Link>
+                </span>
+                <span>
+                  <Link to="/education">Peer Counselling</Link>
+                </span>
+                <span>
+                  <Link to="/empower">Empowerment</Link>
+                </span>
+                <span>
+                  <Link to="/agriculture">Agricultural Activities</Link>
+                </span>
+              </div>
+            </li>
+            <li>
+              <Link className="nav-link" to="/gallerys">
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/covid">
+                COVID-19
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/contact">
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/donate">
+                Donate
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/covid">
+            <Covid />
+          </Route>
+          <Route path="/education">
+            <Education />
+          </Route>
+          <Route path="/feeding">
+            <Feeding />
+          </Route>
+          <Route path="/gallerys">
+            <Gallerys />
+          </Route>
+          <Route path="/program">
+            <Program />
+          </Route>
+          <Route path="/agriculture">
+            <Agriculture />
+          </Route>
+          <Route path="/donate">
+            <Donate />
+          </Route>
+          <Route path="/empower">
+            <Empower />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    );
+  }
 }
 function Footer() {
   return (

@@ -23,7 +23,7 @@ body {
   align-items: flex-end;
   position: fixed;
   width: 100%;
-  line-height: 1rem;
+  // line-height: 1rem;
   z-index: 3;
   padding: 4px;
   padding-left: 2.5rem;
@@ -37,11 +37,25 @@ body {
       height: 66px;
       width: 300px;
     }
+    .ham {
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 12px;
+      div {
+        margin: 3px;
+        width: 27px;
+        border: 2px solid #47525d;
+        border-radius: 2px;
+      }
+    }
   }
   ul {
     display: flex;
     padding: 0;
     align-items: center;
+    transition: display 1s ease-out;
     li {
       list-style: none;
       padding: 0 8px;
@@ -103,6 +117,35 @@ body {
   }
 }
 
+@media (max-width: 858px) {
+  .nav {
+    padding-left: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    #logo {
+      border: none;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      img {
+        width: 200px;
+      }
+      .ham {
+        display: flex;
+      }
+    }
+    ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+
+      .nav-link {
+        line-height: 30px;
+      }
+    }
+  }
+}
 .App {
   text-align: center;
 }
