@@ -2,8 +2,10 @@ import { div } from "prelude-ls";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./styles/App.css";
+import { loadCSS } from "fg-loadcss";
 
-import DehazeIcon from "@material-ui/icons/Dehaze";
+import Icon from "@material-ui/core/Icon";
+import TextField from "@material-ui/core/TextField";
 //Image imports
 import logo from "./assets/images/logo.png";
 import front1 from "./assets/images/front.jpg";
@@ -23,7 +25,7 @@ import ten from "./assets/images/ten.jpg";
 import eleven from "./assets/images/eleven.jpg";
 import twelve from "./assets/images/twelve.jpg";
 import thirteen from "./assets/images/thirteen.jpg";
-
+import abbt from "./assets/images/all.png";
 import Gallery from "react-grid-gallery";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -143,7 +145,7 @@ function App() {
 
 function Home() {
   return (
-    <div style={{ paddingTop: "5rem" }}>
+    <div className="home" style={{}}>
       <div className="header">
         <div className="slider">
           <Swiper
@@ -156,40 +158,24 @@ function Home() {
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >
-            <SwiperSlide style={{ height: "90vh" }}>
+            <SwiperSlide>
               <div>
-                <img
-                  src={front1}
-                  alt=""
-                  style={{ width: "100%", height: "720px" }}
-                ></img>
+                <img src={front1} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ height: "90vh" }}>
+            <SwiperSlide>
               <div>
-                <img
-                  src={front2}
-                  alt=""
-                  style={{ width: "100%", height: "100%" }}
-                ></img>
+                <img src={front2} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ height: "90vh" }}>
+            <SwiperSlide>
               <div>
-                <img
-                  src={front3}
-                  alt=""
-                  style={{ width: "100%", height: "100%" }}
-                ></img>
+                <img src={front3} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ height: "90vh" }}>
+            <SwiperSlide>
               <div>
-                <img
-                  src={front4}
-                  alt=""
-                  style={{ width: "100%", height: "100%" }}
-                ></img>
+                <img src={front4} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -246,9 +232,9 @@ function Home() {
 
 function About() {
   return (
-    <div style={{ paddingTop: "4.5rem" }}>
+    <div className="home">
       <div className="header1">
-        <div id="cover"></div>
+        <img src={abbt} />
       </div>
       <div className="about">
         <section className="intro">
@@ -307,23 +293,23 @@ function About() {
           <h2>Our team</h2>
           <div className="row">
             <div className="col-md-3">
-              <div className="news-img img1"></div>
+              <img src={eleven} className="news-img" />
               <h3>Hillary Okerio</h3>
               <p>Co-Founder</p>
             </div>
             <div className="col-md-3">
-              <div className="news-img img1"></div>
-              <h3>Anthony Masese</h3>
+              <img src={eleven} className="news-img" />
+              <h3>Hillary Okerio</h3>
               <p>Co-Founder</p>
             </div>
             <div className="col-md-3">
-              <div className="news-img img1"></div>
-              <h3>Felix Kibagendi</h3>
+              <img src={eleven} className="news-img" />
+              <h3>Hillary Okerio</h3>
               <p>Co-Founder</p>
             </div>
             <div className="col-md-3">
-              <div className="news-img img1"></div>
-              <h3>Titus Omwando</h3>
+              <img src={eleven} className="news-img" />
+              <h3>Hillary Okerio</h3>
               <p>Co-Founder</p>
             </div>
           </div>
@@ -677,9 +663,7 @@ function Program() {
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menuOpen: false,
-    };
+
     this.updateStuff = this.updateStuff.bind(this);
   }
 
@@ -709,48 +693,72 @@ class Nav extends React.Component {
 
           <ul id="res-nav">
             <li>
-              <Link className="nav-link" to="/about">
+              <Link onClick={this.updateStuff} className="nav-link" to="/about">
                 About Us
               </Link>
             </li>
             <li id="nav-program">
               <h3>
-                <Link className="nav-link" to="/program">
+                <Link
+                  onClick={this.updateStuff}
+                  className="nav-link"
+                  to="/program"
+                >
                   Programs
                 </Link>
               </h3>
               <div>
                 <span>
-                  <Link to="/feeding">Feeding program</Link>
+                  <Link onClick={this.updateStuff} to="/feeding">
+                    Feeding program
+                  </Link>
                 </span>
                 <span>
-                  <Link to="/education">Peer Counselling</Link>
+                  <Link onClick={this.updateStuff} to="/education">
+                    Peer Counselling
+                  </Link>
                 </span>
                 <span>
-                  <Link to="/empower">Empowerment</Link>
+                  <Link onClick={this.updateStuff} to="/empower">
+                    Empowerment
+                  </Link>
                 </span>
                 <span>
-                  <Link to="/agriculture">Agricultural Activities</Link>
+                  <Link onClick={this.updateStuff} to="/agriculture">
+                    Agricultural Activities
+                  </Link>
                 </span>
               </div>
             </li>
             <li>
-              <Link className="nav-link" to="/gallerys">
+              <Link
+                onClick={this.updateStuff}
+                className="nav-link"
+                to="/gallerys"
+              >
                 Gallery
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/covid">
+              <Link onClick={this.updateStuff} className="nav-link" to="/covid">
                 COVID-19
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/contact">
+              <Link
+                onClick={this.updateStuff}
+                className="nav-link"
+                to="/contact"
+              >
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/donate">
+              <Link
+                onClick={this.updateStuff}
+                className="nav-link"
+                to="/donate"
+              >
                 Donate
               </Link>
             </li>
@@ -796,94 +804,127 @@ class Nav extends React.Component {
   }
 }
 function Footer() {
+  React.useEffect(() => {
+    const node = loadCSS(
+      "https://use.fontawesome.com/releases/v5.12.0/css/all.css",
+      document.querySelector("#font-awesome-css")
+    );
+
+    return () => {
+      node.parentNode.removeChild(node);
+    };
+  }, []);
   return (
     <footer className="footer">
       <div className="ft1">
-        <div className="form">
-          <h2>Email newsletter</h2>
-          <input type="text" placeholder="First name" name="fname" id="fname" />
-          <input type="text" placeholder="Last name" name="lname" id="lname" />
-          <input
-            type="email"
-            placeholder="Email adress"
-            name="email"
-            id="email"
-          />
-          <h3>Subscribe</h3>
+        <div className="ft-mission">
+          <img src={logo} />
+          <p>
+            <b>Turning Lives Around Foundation</b> is a local program that aims
+            at transforming and enlightening youths and women in urban slums by
+            giving out opportunities, entrepreneurship skills and helping the
+            community at large.
+          </p>
         </div>
-        <div className="form2">
-          <div id="ft-nav">
-            <ul className="ful1">
-              <li>What we do</li>
-              <li>Community First</li>
-              <li>Our model</li>
-              <li>How we grow</li>
-              <li>Insights Library</li>
-            </ul>
-            <ul className="ful1">
-              <li>Who we are</li>
-              <li>Our Impact</li>
-              <li>Press and Awards</li>
-              <li>Board and Advisory</li>
-              <li>Reports</li>
-            </ul>
-            <ul className="ful1">
-              <li>Youth empowerment</li>
-              <li>Girl child empowerment</li>
-              <li>Women welfare development</li>
-              <li>Mentorship programme</li>
-            </ul>
-            <div className="ful2">
-              <h4>Contact and Physical Information</h4>
-              <span>Tulia Foundation</span>
-              <span>Kibera Drive, FPFK Church, Kibera</span>
-              <span>admin@tuliafoundation.org</span>
-              <span>Tel: +254795484304</span>
-              <span>P.O. Box 44965-00100</span>
-              <span>Nairobi, Kenya</span>
-            </div>
-          </div>
-          <ul className="ft-lk">
-            <li>
-              <a href="#">
-                <i className="fab fa-facebook-square"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fab fa-youtube"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fab fa-pinterest-p"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fas fa-rss"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fas fa-envelope-square"></i>
-              </a>
-            </li>
-          </ul>
+        <div className="ft-program">
+          <h2> What we do</h2>
+          <p>
+            <Link to="/empower">Empowerment</Link>
+          </p>
+          <p>
+            <Link to="/agriculture">Promote Agriculture</Link>
+          </p>
+          <p>
+            <Link to="/sport">Teach Sports</Link>
+          </p>
+          <p>
+            <Link to="/feeding">Feeding Programme</Link>
+          </p>
+        </div>
+        <div className="ft-contact">
+          <h2>Contact Information</h2>
+          <p>Tulia Foundation</p>
+          <p>Kibera Drive, FPFK Church, Kibera</p>
+          <p>
+            <a href="mailto:support@tuliafoundation.org">
+              support@tuliafoundation.org
+            </a>
+          </p>
+          <p>Tel: +254795484304, +254702338066</p>
+          <p>P.O. Box 44965-00100</p>
+          <p>Nairobi, Kenya</p>
+        </div>
+        <div className="ft-form">
+          <h2>Email newsletter</h2>
+          <TextField
+            className="jerry"
+            variant="outlined"
+            label="Email Address"
+            type="email"
+            color="primary"
+            placeholder="example@example.com"
+          />
+          <TextField
+            className="jerry"
+            variant="outlined"
+            label="First Name"
+            type="text"
+            color="primary"
+            placeholder="First Name"
+          />
+          <TextField
+            className="jerry"
+            variant="outlined"
+            label="Last Name"
+            type="text"
+            color="primary"
+            placeholder="Last Name"
+          />
+          <h4>Subscribe</h4>
         </div>
       </div>
       <div className="ft2">
         <span>© 2020 Tulia Foundation. All Rights Reserved</span>
+        <ul className="ft-lk">
+          <li>
+            <a href="#">
+              <Icon className="fab fa-facebook-square ft-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Icon className="fab fa-twitter ft-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Icon className="fab fa-youtube ft-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Icon className="fab fa-instagram ft-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Icon className="fab fa-pinterest-p ft-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Icon className="fas fa-rss ft-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Icon
+                style={{ fontSize: 20 }}
+                className="fas fa-envelope-square ft-icon"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );
