@@ -140,7 +140,24 @@ const IMAGES = [
 ];
 
 function App() {
-  return <Nav />;
+  return (
+    <Router>
+      <Nav />
+      <Switch>
+        <Route path="/about" exact component={About} />
+        <Route path="/contact" exact component={Contact} />
+        <Route path="/covid" exact component={Covid} />
+        <Route path="/education" exact component={Education} />
+        <Route path="/feeding" exact component={Feeding} />
+        <Route path="/gallerys" exact component={Gallerys} />
+        <Route path="/program" exact component={Program} />
+        <Route path="/agriculture" exact component={Agriculture} />
+        <Route path="/donate" exact component={Donate} />
+        <Route path="/empower" exact component={Empower} />
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </Router>
+  );
 }
 
 function Home() {
@@ -669,137 +686,95 @@ class Nav extends React.Component {
 
   updateStuff() {
     let x = document.getElementById("res-nav");
-    if (x.style.display === "flex") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "flex";
+
+    if (window.outerWidth < 992) {
+      if (x.style.display === "flex") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "flex";
+      }
     }
   }
 
   render() {
     return (
-      <Router>
-        <nav className="nav">
-          <div id="logo">
-            <Link to="/">
-              <img src={logo} alt="Organisation logo" />
-            </Link>
-            <div className="ham" onClick={this.updateStuff}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+      <nav className="nav">
+        <div id="logo">
+          <Link to="/">
+            <img src={logo} alt="Organisation logo" />
+          </Link>
+          <div className="ham" onClick={this.updateStuff}>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
+        </div>
 
-          <ul id="res-nav">
-            <li>
-              <Link onClick={this.updateStuff} className="nav-link" to="/about">
-                About Us
+        <ul id="res-nav">
+          <li>
+            <Link onClick={this.updateStuff} className="nav-link" to="/about">
+              About Us
+            </Link>
+          </li>
+          <li id="nav-program">
+            <h3>
+              <Link
+                onClick={this.updateStuff}
+                className="nav-link"
+                to="/program"
+              >
+                Programs
               </Link>
-            </li>
-            <li id="nav-program">
-              <h3>
-                <Link
-                  onClick={this.updateStuff}
-                  className="nav-link"
-                  to="/program"
-                >
-                  Programs
+            </h3>
+            <div>
+              <span>
+                <Link onClick={this.updateStuff} to="/feeding">
+                  Feeding program
                 </Link>
-              </h3>
-              <div>
-                <span>
-                  <Link onClick={this.updateStuff} to="/feeding">
-                    Feeding program
-                  </Link>
-                </span>
-                <span>
-                  <Link onClick={this.updateStuff} to="/education">
-                    Peer Counselling
-                  </Link>
-                </span>
-                <span>
-                  <Link onClick={this.updateStuff} to="/empower">
-                    Empowerment
-                  </Link>
-                </span>
-                <span>
-                  <Link onClick={this.updateStuff} to="/agriculture">
-                    Agricultural Activities
-                  </Link>
-                </span>
-              </div>
-            </li>
-            <li>
-              <Link
-                onClick={this.updateStuff}
-                className="nav-link"
-                to="/gallerys"
-              >
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link onClick={this.updateStuff} className="nav-link" to="/covid">
-                COVID-19
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={this.updateStuff}
-                className="nav-link"
-                to="/contact"
-              >
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={this.updateStuff}
-                className="nav-link"
-                to="/donate"
-              >
-                Donate
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/covid">
-            <Covid />
-          </Route>
-          <Route path="/education">
-            <Education />
-          </Route>
-          <Route path="/feeding">
-            <Feeding />
-          </Route>
-          <Route path="/gallerys">
-            <Gallerys />
-          </Route>
-          <Route path="/program">
-            <Program />
-          </Route>
-          <Route path="/agriculture">
-            <Agriculture />
-          </Route>
-          <Route path="/donate">
-            <Donate />
-          </Route>
-          <Route path="/empower">
-            <Empower />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+              </span>
+              <span>
+                <Link onClick={this.updateStuff} to="/education">
+                  Peer Counselling
+                </Link>
+              </span>
+              <span>
+                <Link onClick={this.updateStuff} to="/empower">
+                  Empowerment
+                </Link>
+              </span>
+              <span>
+                <Link onClick={this.updateStuff} to="/agriculture">
+                  Agricultural Activities
+                </Link>
+              </span>
+            </div>
+          </li>
+          <li>
+            <Link
+              onClick={this.updateStuff}
+              className="nav-link"
+              to="/gallerys"
+            >
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link onClick={this.updateStuff} className="nav-link" to="/covid">
+              COVID-19
+            </Link>
+          </li>
+          <li>
+            <Link onClick={this.updateStuff} className="nav-link" to="/contact">
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link onClick={this.updateStuff} className="nav-link" to="/donate">
+              Donate
+            </Link>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }
