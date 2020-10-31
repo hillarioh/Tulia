@@ -162,7 +162,7 @@ function App() {
 
 function Home() {
   return (
-    <div className="home" style={{}}>
+    <div className="home">
       <div className="header">
         <div className="slider">
           <Swiper
@@ -201,33 +201,33 @@ function Home() {
 
       <section className="over">
         <div className="overview">
-          <div className="over-head">
+          <Link className="over-head" to="/program">
             <h2>What we do</h2>
             <div className="hint"></div>
             <p className="over-content">
               We Turn lives around in the community through various program
               running under our chain.
             </p>
-          </div>
+          </Link>
         </div>
 
         <div className="overview">
-          <div className="over-head">
+          <Link className="over-head" to="/education">
             <h2>Our Impact</h2>
             <div className="hint"></div>
             <p className="over-content">
               Our agenda entails creating positive impact through scuccess in
               our team.
             </p>
-          </div>
+          </Link>
         </div>
 
         <div className="overview">
-          <div className="over-head">
+          <Link className="over-head" to="/contact">
             <h2>Work with Us</h2>
             <div className="hint"></div>
             <p className="over-content">Get in touch with us.</p>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -248,6 +248,7 @@ function Home() {
 }
 
 function About() {
+  window.scroll(0, 0);
   return (
     <div className="home">
       <div className="header1">
@@ -337,6 +338,7 @@ function About() {
   );
 }
 function Agriculture() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="educate">
@@ -369,6 +371,7 @@ function Agriculture() {
   );
 }
 function Contact() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="contact">
@@ -407,6 +410,7 @@ function Contact() {
   );
 }
 function Covid() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="covid">
@@ -438,6 +442,7 @@ function Covid() {
   );
 }
 function Donate() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="donate">
@@ -485,6 +490,7 @@ function Donate() {
   );
 }
 function Education() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="educate">
@@ -515,6 +521,7 @@ function Education() {
   );
 }
 function Empower() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="educate">
@@ -553,6 +560,7 @@ function Empower() {
   );
 }
 function Feeding() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="feeding">
@@ -607,11 +615,12 @@ function Gallerys() {
   );
 }
 function Program() {
+  window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
       <div className="program">
         <div className="top-program">
-          <h2>Our Programs</h2>
+          <h2 id="program">Our Programs</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sequi
             suscipit ab harum quas vel quaerat voluptatibus accusantium facere
