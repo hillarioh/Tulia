@@ -5,9 +5,24 @@
   background: url(../assets/images/texture.jpg);
   padding: 2.5rem 0;
 
+  .ov-1 {
+    background-image: url(../assets/images/overview-we-do.jpg);
+    background-position-x: 30%;
+  }
+
+  .ov-2 {
+    background-image: url(../assets/images/overview-impact.jpg);
+    background-position-y: 10%;
+  }
+
+  .ov-3 {
+    background-image: url(../assets/images/overview-donate.jpg);
+
+  }
+
   .overview {
-    background-image: url(../assets/images/one.jpg);
-    background-position: 100%;
+
+    // background-position: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 280px;
@@ -47,6 +62,7 @@
       &:hover {
         padding-top: 20px;
         background: linear-gradient(to top, #f77e39, transparent);
+
         .over-content {
           display: block;
         }
@@ -97,8 +113,7 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-}
+@media (min-width: 992px) and (max-width: 1199px) {}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .vision {
@@ -117,22 +132,28 @@
       margin: 30px;
     }
   }
+
   .vision {
     padding: 2rem 1rem;
+
     .vis-body {
       width: 100%;
+
       h1 {
         font-size: 24px;
       }
+
       p {
         font-size: 20px;
       }
+
       h3 {
         // font-size: 20px;
       }
     }
   }
 }
+
 @media (max-width: 575px) {
   .over {
     flex-direction: column;
@@ -142,16 +163,21 @@
       margin: 20px;
     }
   }
+
   .vision {
     padding: 2rem 1rem;
+
     .vis-body {
       width: 100%;
+
       h1 {
         font-size: 24px;
       }
+
       p {
         font-size: 20px;
       }
+
       h3 {
         // font-size: 20px;
       }

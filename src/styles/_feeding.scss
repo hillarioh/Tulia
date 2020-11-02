@@ -1,6 +1,7 @@
 .feeding {
   background: url(../assets/images/texture.jpg);
   box-sizing: border-box;
+
   .intro {
     width: 70%;
     margin: auto;
@@ -21,27 +22,23 @@
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 2rem;
+
+      // .fp1 {
+
+      //   flex: 45%;
+      //   max-width: 45%;
+      //   height: 300px;
+      //   margin: 5px;
+      // }
+
       .fp1 {
-        background-image: url(../assets/images/food1.jpg);
-        background-position: 0 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex: 45%;
-        max-width: 45%;
-        height: 300px;
-        margin-right: 10px;
+
+        flex: 70%;
+        max-width: 70%;
+        height: 500px;
+        margin: 15px;
       }
 
-      .fp2 {
-        background-image: url(../assets/images/food2.jpg);
-        background-position: 0 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex: 45%;
-        max-width: 45%;
-        margin-left: 10px;
-        height: 300px;
-      }
     }
   }
 }

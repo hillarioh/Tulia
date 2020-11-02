@@ -7,11 +7,43 @@ import { loadCSS } from "fg-loadcss";
 import Icon from "@material-ui/core/Icon";
 import TextField from "@material-ui/core/TextField";
 //Image imports
+//Slide Images
+import slideA from "./assets/images/slide-a.jpg";
+import slideB from "./assets/images/slide-b.jpg";
+import slideC from "./assets/images/slide-c.jpg";
+import slideD from "./assets/images/slide-d.jpg";
+import slideE from "./assets/images/slide-e.jpg";
+import slideF from "./assets/images/slide-f.jpg";
+
+//Team Images
+import teamA from "./assets/images/team-hilla.jpg"
+import teamB from "./assets/images/team-anto.jpg"
+import teamC from "./assets/images/team-titus.jpg"
+import teamD from "./assets/images/team-joy.jpg"
+import teamE from "./assets/images/team-fai.jpg"
+
+//Feed images
+import feed1 from "./assets/images/feed1.jpg"
+import feed2 from "./assets/images/feed2.jpeg"
+import feed3 from "./assets/images/feed3.jpeg"
+
+
+//Peer educators image
+import peer1 from "./assets/images/peer1.jpg"
+import peer2 from "./assets/images/peer2.jpg"
+
+//Empowerment
+import emp1 from "./assets/images/emp1.jpg"
+import emp2 from "./assets/images/emp2.jpeg"
+import emp3 from "./assets/images/emp3.jpeg"
+
+//Agriculture pics
+import agr1 from "./assets/images/agr1.jpg"
+import agr2 from "./assets/images/agr2.jpg"
+import agr3 from "./assets/images/agr3.jpg"
+import agr4 from "./assets/images/agr4.jpg"
+
 import logo from "./assets/images/logo.png";
-import front1 from "./assets/images/front.jpg";
-import front2 from "./assets/images/front2.jpg";
-import front3 from "./assets/images/one.jpg";
-import front4 from "./assets/images/two.jpg";
 import onee from "./assets/images/onee.jpg";
 import twoo from "./assets/images/twoo.jpg";
 import threee from "./assets/images/threee.jpg";
@@ -48,70 +80,70 @@ const IMAGES = [
     thumbnail: onee,
     thumbnailWidth: 248,
     thumbnailHeight: 320,
-    caption: "Our Yard",
+    caption: "empowerment",
   },
   {
     src: twoo,
     thumbnail: twoo,
     thumbnailWidth: 320,
     thumbnailHeight: 174,
-    caption: "After Rain (Jeshu John - designerspics.com)",
+    caption: "empowerment",
   },
   {
     src: threee,
     thumbnail: threee,
     thumbnailWidth: 320,
     thumbnailHeight: 212,
-    caption: "Boats (Jeshu John - designerspics.com)",
+    caption: "empowerment",
   },
   {
     src: fourr,
     thumbnail: fourr,
     thumbnailWidth: 320,
     thumbnailHeight: 212,
-    caption: "Color Pencils (Jeshu John - designerspics.com)",
+    caption: "empowerment",
   },
   {
     src: fivee,
     thumbnail: fivee,
     thumbnailWidth: 320,
     thumbnailHeight: 213,
-    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+    caption: "empowerment",
   },
   {
     src: sixx,
     thumbnail: sixx,
     thumbnailWidth: 320,
     thumbnailHeight: 183,
-    caption: "37H (gratispgraphy.com)",
+    caption: "empowerment",
   },
   {
     src: sevenn,
     thumbnail: sevenn,
     thumbnailWidth: 240,
     thumbnailHeight: 320,
-    caption: "8H (gratisography.com)",
+    caption: "empowerment",
   },
   {
     src: eight,
     thumbnail: eight,
     thumbnailWidth: 320,
     thumbnailHeight: 190,
-    caption: "286H (gratisography.com)",
+    caption: "empowerment",
   },
   {
     src: nine,
     thumbnail: nine,
     thumbnailWidth: 320,
     thumbnailHeight: 148,
-    caption: "315H (gratisography.com)",
+    caption: "empowerment",
   },
   {
     src: ten,
     thumbnail: ten,
     thumbnailWidth: 320,
     thumbnailHeight: 213,
-    caption: "201H (gratisography.com)",
+    caption: "empowerment",
   },
   {
     src: twelve,
@@ -119,7 +151,7 @@ const IMAGES = [
     thumbnail: twelve,
     thumbnailWidth: 248,
     thumbnailHeight: 320,
-    caption: "Big Ben (Tom Eversley - isorepublic.com)",
+    caption: "empowerment",
   },
   {
     src: eleven,
@@ -127,7 +159,7 @@ const IMAGES = [
     thumbnail: eleven,
     thumbnailWidth: 320,
     thumbnailHeight: 113,
-    caption: "Red Zone - Paris (Tom Eversley - isorepublic.com)",
+    caption: "empowerment",
   },
   {
     src: thirteen,
@@ -135,7 +167,7 @@ const IMAGES = [
     thumbnail: thirteen,
     thumbnailWidth: 313,
     thumbnailHeight: 320,
-    caption: "Wood Glass (Tom Eversley - isorepublic.com)",
+    caption: "empowerment",
   },
 ];
 
@@ -177,22 +209,32 @@ function Home() {
           >
             <SwiperSlide>
               <div>
-                <img src={front1} alt="" style={{ width: "100%" }}></img>
+                <img src={slideA} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img src={front2} alt="" style={{ width: "100%" }}></img>
+                <img src={slideB} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img src={front3} alt="" style={{ width: "100%" }}></img>
+                <img src={slideC} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div>
-                <img src={front4} alt="" style={{ width: "100%" }}></img>
+                <img src={slideD} alt="" style={{ width: "100%" }}></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={slideE} alt="" style={{ width: "100%" }}></img>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div>
+                <img src={slideF} alt="" style={{ width: "100%" }}></img>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -200,7 +242,7 @@ function Home() {
       </div>
 
       <section className="over">
-        <div className="overview">
+        <div className="overview ov-1">
           <Link className="over-head" to="/program">
             <h2>What we do</h2>
             <div className="hint"></div>
@@ -211,7 +253,7 @@ function Home() {
           </Link>
         </div>
 
-        <div className="overview">
+        <div className="overview ov-2">
           <Link className="over-head" to="/education">
             <h2>Our Impact</h2>
             <div className="hint"></div>
@@ -222,7 +264,7 @@ function Home() {
           </Link>
         </div>
 
-        <div className="overview">
+        <div className="overview ov-3">
           <Link className="over-head" to="/contact">
             <h2>Work with Us</h2>
             <div className="hint"></div>
@@ -235,11 +277,10 @@ function Home() {
         <div className="vis-body">
           <h1>Delivering a Response to COVID-19</h1>
           <p>
-            At a time of a global health crisis, we are drawing on our deep
-            delivery expertise and trusted community ties to respond to emerging
-            farmer needs.
+           In a time of covid-19 global pandemic we are engaging the community
+            to respond to effectively to curb the spread of the disease.
           </p>
-          <h3>Read More</h3>
+          <Link to="/covid"><h3>Read More</h3></Link>
         </div>
       </section>
       <Footer />
@@ -311,24 +352,34 @@ function About() {
           <h2>Our team</h2>
           <div className="row">
             <div className="col-md-3">
-              <img src={eleven} className="news-img" />
+              <img src={teamA} className="news-img" />
               <h3>Hillary Okerio</h3>
               <p>Co-Founder</p>
             </div>
             <div className="col-md-3">
-              <img src={eleven} className="news-img" />
-              <h3>Hillary Okerio</h3>
+              <img src={teamB} className="news-img" />
+              <h3>Anthony Masese</h3>
               <p>Co-Founder</p>
             </div>
             <div className="col-md-3">
               <img src={eleven} className="news-img" />
-              <h3>Hillary Okerio</h3>
-              <p>Co-Founder</p>
+              <h3>Felix Kibagendi</h3>
+              <p>Finance Director</p>
             </div>
             <div className="col-md-3">
-              <img src={eleven} className="news-img" />
-              <h3>Hillary Okerio</h3>
-              <p>Co-Founder</p>
+              <img src={teamC} className="news-img" />
+              <h3>Titus Kebabe</h3>
+              <p>Marketing</p>
+            </div>
+            <div className="col-md-3">
+              <img src={teamD} className="news-img" />
+              <h3>Joy Kwamboka</h3>
+              <p>Social Co-ordinator</p>
+            </div>
+            <div className="col-md-3">
+              <img src={teamE} className="news-img" />
+              <h3>Faith Kemunto</h3>
+              <p>Welfare Co-ordinator</p>
             </div>
           </div>
         </section>
@@ -341,7 +392,7 @@ function Agriculture() {
   window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
-      <div className="educate">
+      <div className="agri">
         <section className="intro">
           <h2>Agricultural program</h2>
           <p>
@@ -361,8 +412,12 @@ function Agriculture() {
             because of our farm and the local well wishers.
           </p>
           <div className="feed-pic">
-            <div className="fp1"></div>
-            <div className="fp2"></div>
+            <img src={slideC} className="fp1" />
+            <img src={slideE} className="fp1" />
+            <img src={agr1} className="fp1" />
+            <img src={agr2} className="fp1" />
+            <img src={agr3} className="fp1" />
+            <img src={agr4} className="fp1" />
           </div>
         </section>
       </div>
@@ -413,7 +468,7 @@ function Covid() {
   window.scroll(0, 0);
   return (
     <div style={{ paddingTop: "4.5rem" }}>
-      <div className="covid">
+      <div className="educate">
         <section className="intro">
           <h2>Covid 19</h2>
           <p>
@@ -426,14 +481,7 @@ function Covid() {
             providing food for the children’s families.
           </p>
           <div className="feed-pic">
-            <div className="fp1"></div>
-            <div className="fp2"></div>
-            <div className="fp1"></div>
-            <div className="fp2"></div>
-            <div className="fp1"></div>
-            <div className="fp2"></div>
-            <div className="fp1"></div>
-            <div className="fp2"></div>
+            <img src={twoo} className="fp1" />
           </div>
         </section>
       </div>
@@ -511,8 +559,8 @@ function Education() {
             to continue with short courses.
           </p>
           <div className="feed-pic">
-            <div className="fp1"></div>
-            <div className="fp2"></div>
+            <img src={peer1} className="fp1" />
+            <img src={peer2} className="fp1" />
           </div>
         </section>
       </div>
@@ -537,21 +585,21 @@ function Empower() {
             as a way of life change and making a different in the community.
           </p>
           <div className="feed-pic">
-            <div className="fp1"></div>
-            <div className="fp2"></div>
+            <img src={emp1} className="fp1" />
           </div>
         </section>
         <section className="intro">
           <h2>Women Empowerment</h2>
           <p>
-            Through the feeding program success we have been able to have women
+            We have managed to partner with local organisation to provide food for families facing challenges during this corona pandemic.
+            Also the feeding program success we have been able to have women
             who have join together to have a common goal and objectives This
             women have started forming saving group through our training and
             empowerment
           </p>
           <div className="feed-pic">
-            <div className="fp1"></div>
-            <div className="fp2"></div>
+            <img src={emp2} className="fp1" />
+            <img src={emp3} className="fp1" />
           </div>
         </section>
       </div>
@@ -579,8 +627,9 @@ function Feeding() {
             another
           </p>
           <div className="feed-pic">
-            <div className="fp1"></div>
-            <div className="fp2"></div>
+            <img src={feed1} className="fp1" />
+            <img src={feed2} className="fp1" />
+            <img src={feed3} className="fp1" />
           </div>
         </section>
       </div>
@@ -725,15 +774,9 @@ class Nav extends React.Component {
               About Us
             </Link>
           </li>
-          <li id="nav-program">
+          <li id="nav-program" onClick={this.updateStuff} className="nav-link">
             <h3>
-              <Link
-                onClick={this.updateStuff}
-                className="nav-link"
-                to="/program"
-              >
                 Programs
-              </Link>
             </h3>
             <div>
               <span>
