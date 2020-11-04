@@ -16,32 +16,31 @@ import slideE from "./assets/images/slide-e.jpg";
 import slideF from "./assets/images/slide-f.jpg";
 
 //Team Images
-import teamA from "./assets/images/team-hilla.jpg"
-import teamB from "./assets/images/team-anto.jpg"
-import teamC from "./assets/images/team-titus.jpg"
-import teamD from "./assets/images/team-joy.jpg"
-import teamE from "./assets/images/team-fai.jpg"
+import teamA from "./assets/images/team-hilla.jpg";
+import teamB from "./assets/images/team-anto.jpg";
+import teamC from "./assets/images/team-titus.jpg";
+import teamD from "./assets/images/team-joy.jpg";
+import teamE from "./assets/images/team-fai.jpg";
 
 //Feed images
-import feed1 from "./assets/images/feed1.jpg"
-import feed2 from "./assets/images/feed2.jpeg"
-import feed3 from "./assets/images/feed3.jpeg"
-
+import feed1 from "./assets/images/feed1.jpg";
+import feed2 from "./assets/images/feed2.jpeg";
+import feed3 from "./assets/images/feed3.jpeg";
 
 //Peer educators image
-import peer1 from "./assets/images/peer1.jpg"
-import peer2 from "./assets/images/peer2.jpg"
+import peer1 from "./assets/images/peer1.jpg";
+import peer2 from "./assets/images/peer2.jpg";
 
 //Empowerment
-import emp1 from "./assets/images/emp1.jpg"
-import emp2 from "./assets/images/emp2.jpeg"
-import emp3 from "./assets/images/emp3.jpeg"
+import emp1 from "./assets/images/emp1.jpg";
+import emp2 from "./assets/images/emp2.jpeg";
+import emp3 from "./assets/images/emp3.jpeg";
 
 //Agriculture pics
-import agr1 from "./assets/images/agr1.jpg"
-import agr2 from "./assets/images/agr2.jpg"
-import agr3 from "./assets/images/agr3.jpg"
-import agr4 from "./assets/images/agr4.jpg"
+import agr1 from "./assets/images/agr1.jpg";
+import agr2 from "./assets/images/agr2.jpg";
+import agr3 from "./assets/images/agr3.jpg";
+import agr4 from "./assets/images/agr4.jpg";
 
 import logo from "./assets/images/logo.png";
 import onee from "./assets/images/onee.jpg";
@@ -277,10 +276,12 @@ function Home() {
         <div className="vis-body">
           <h1>Delivering a Response to COVID-19</h1>
           <p>
-           In a time of covid-19 global pandemic we are engaging the community
+            In a time of covid-19 global pandemic we are engaging the community
             to respond to effectively to curb the spread of the disease.
           </p>
-          <Link to="/covid"><h3>Read More</h3></Link>
+          <Link to="/covid">
+            <h3>Read More</h3>
+          </Link>
         </div>
       </section>
       <Footer />
@@ -591,11 +592,11 @@ function Empower() {
         <section className="intro">
           <h2>Women Empowerment</h2>
           <p>
-            We have managed to partner with local organisation to provide food for families facing challenges during this corona pandemic.
-            Also the feeding program success we have been able to have women
-            who have join together to have a common goal and objectives This
-            women have started forming saving group through our training and
-            empowerment
+            We have managed to partner with local organisation to provide food
+            for families facing challenges during this corona pandemic. Also the
+            feeding program success we have been able to have women who have
+            join together to have a common goal and objectives This women have
+            started forming saving group through our training and empowerment
           </p>
           <div className="feed-pic">
             <img src={emp2} className="fp1" />
@@ -775,9 +776,7 @@ class Nav extends React.Component {
             </Link>
           </li>
           <li id="nav-program" onClick={this.updateStuff} className="nav-link">
-            <h3>
-                Programs
-            </h3>
+            <h3>Programs</h3>
             <div>
               <span>
                 <Link onClick={this.updateStuff} to="/feeding">
@@ -847,10 +846,10 @@ function Footer() {
         <div className="ft-mission">
           <img src={logo} />
           <p>
-            <b>Turning Lives Around Foundation</b> is a local program that aims
-            at transforming and enlightening youths and women in urban slums by
-            giving out opportunities, entrepreneurship skills and helping the
-            community at large.
+            <b>Tulia Foundation (Turning Lives Around)</b> is a local program
+            that aims at transforming and enlightening youths and women in urban
+            slums by giving out opportunities, entrepreneurship skills and
+            helping the community at large.
           </p>
         </div>
         <div className="ft-program">
