@@ -672,9 +672,8 @@ function Program() {
         <div className="top-program">
           <h2 id="program">Our Programs</h2>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est sequi
-            suscipit ab harum quas vel quaerat voluptatibus accusantium facere
-            iure!
+            This is a list of the program that we manage under our mission and
+            vision.
           </p>
         </div>
         <div className="bottom-program">
